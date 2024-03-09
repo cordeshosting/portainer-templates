@@ -1,4 +1,25 @@
-[
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 1,
+      "title": "Registry",
+      "description": "Docker image registry",
+      "categories": [
+        "docker"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+      "image": "registry:latest",
+      "ports": [
+        "5000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/var/lib/registry"
+        }
+      ]
+    },
     {
       "type": 1,
       "title": "Node Templater App",
@@ -22,4 +43,5 @@
       "hostname": "templater-app1",
       "command": "sh -c \"cd /srv/app/ && npm run start\""
     }
-]
+  ]
+}
