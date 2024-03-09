@@ -1,0 +1,28 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 1,
+      "title": "Node Templater App",
+      "description": "Eine spezialisierte Node.js-Anwendung, die ein benutzerdefiniertes Script ausführt.",
+      "categories": [
+        "Webanwendungen"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
+      "image": "node:latest",
+      "interactive": false,
+      "restart_policy": "always",
+      "volumes": [
+        {
+          "container": "/srv/app/",
+          "bind": "/srv/templater/",
+          "readonly": false
+        }
+      ],
+      "network": "bridge",
+      "hostname": "templater-app1",
+      "command": "sh -c \"cd /srv/app/ && npm run start\""
+    }
+  ],
+}
