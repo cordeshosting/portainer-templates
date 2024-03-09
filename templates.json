@@ -1,6 +1,4 @@
-{
-  "version": "2",
-  "templates": [
+[
     {
       "type": 1,
       "title": "Node Templater App",
@@ -24,5 +22,4 @@
       "hostname": "templater-app1",
       "command": "sh -c \"cd /srv/app/ && npm run start\""
     }
-  ]
-}
+]
