@@ -3,26 +3,7 @@
   "templates": [
     {
       "type": 1,
-      "title": "Registry",
-      "description": "Docker image registry",
-      "categories": [
-        "docker"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
-      "image": "registry:latest",
-      "ports": [
-        "5000/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/lib/registry"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Node Templater App",
+      "title": "Node.js Template",
       "description": "Eine spezialisierte Node.js-Anwendung, die ein benutzerdefiniertes Script ausführt.",
       "categories": [
         "Webanwendungen"
@@ -35,13 +16,13 @@
       "volumes": [
         {
           "container": "/srv/app/",
-          "bind": "/srv/templater/",
+          "bind": "ChangeME",
           "readonly": false
         }
       ],
       "network": "bridge",
       "hostname": "templater-app1",
-      "command": "sh -c \"cd /srv/app/ && npm run start\""
+      "command": "sh -c \"cd /srv/app/ && npm install && npm run start\""
     }
   ]
 }
